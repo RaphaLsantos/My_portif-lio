@@ -922,7 +922,7 @@ body.cursor-enabled .cursor-blur {
 }
 
 .project-image img {
-    width: 100%;
+    width: 80%;
     height: 100%;
     object-fit: cover;
     transition: transform var(--transition-base);
