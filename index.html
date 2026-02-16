@@ -16,424 +16,441 @@
     <div class="cursor"></div>
     <div class="cursor-blur"></div>
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <div class="logo">
-                <span class="logo-text">RS</span>
+    <!-- Sidebar Lateral -->
+    <aside class="sidebar">
+        <div class="sidebar-content">
+            <div class="logo-sidebar">
+                <img src="./img/user/rapha.png" alt="Raphael Silva" class="logo-img">
+                <h2>Raphael Silva</h2>
             </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">Sobre</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projetos</a></li>
-                <li><a href="#contact" class="nav-link">Contato</a></li>
-            </ul>
-            <div class="hamburger">
-                <span></span>
-                <span></span>
-                <span></span>
+
+            <nav class="sidebar-nav">
+                <a href="#home" class="nav-item active" data-section="home">
+                    <i class="fas fa-home"></i>
+                    <span>Início</span>
+                </a>
+                <a href="#about" class="nav-item" data-section="about">
+                    <i class="fas fa-user"></i>
+                    <span>Sobre mim</span>
+                </a>
+                <a href="#skills" class="nav-item" data-section="skills">
+                    <i class="fas fa-code"></i>
+                    <span>Skills</span>
+                </a>
+                <a href="#projects" class="nav-item" data-section="projects">
+                    <i class="fas fa-briefcase"></i>
+                    <span>Projetos</span>
+                </a>
+                <a href="#contact" class="nav-item" data-section="contact">
+                    <i class="fas fa-envelope"></i>
+                    <span>Contato</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="https://linkedin.com" target="_blank" class="social-sidebar">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com" target="_blank" class="social-sidebar">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="social-sidebar">
+                    <i class="fab fa-instagram"></i>
+                </a>
             </div>
         </div>
-    </nav>
 
-    <!-- Hero Section - Ultra Elegante -->
-    <section id="home" class="hero">
-        <div class="hero-background">
-            <div class="gradient-mesh"></div>
-            <div class="gradient-orb orb-1"></div>
-            <div class="gradient-orb orb-2"></div>
-            <div class="gradient-orb orb-3"></div>
-        </div>
+        <!-- Toggle Button para Mobile -->
+        <button class="sidebar-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+    </aside>
 
-        <div class="hero-content">
-            <div class="hero-text">
-                <div class="hero-label reveal-text">
-                    <span>Bem-vindo ao meu portfólio</span>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="gradient-mesh"></div>
+                <div class="gradient-orb orb-1"></div>
+                <div class="gradient-orb orb-2"></div>
+                <div class="gradient-orb orb-3"></div>
+            </div>
+
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-label reveal-text">Bem-vindo</p>
+                        <h1 class="hero-title">
+                            <span class="title-word" data-word="Raphael">Raphael</span>
+                            <span class="title-word" data-word="Silva">Silva</span>
+                        </h1>
+                        <p class="hero-subtitle reveal-text">
+                            Desenvolvedor Web Full Stack
+                        </p>
+                        <p class="hero-description reveal-text">
+                            Criando experiências digitais extraordinárias com React, Node.js e TypeScript.
+                            Especializado em design responsivo e performance web.
+                        </p>
+                        <div class="hero-buttons">
+                            <a href="#projects" class="btn btn-primary magnetic-btn">
+                                <span>Ver Projetos</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary magnetic-btn">
+                                <span>Entrar em Contato</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <div class="image-wrapper">
+                            <div class="image-frame">
+                                <img src="./img/user/rapha.png" alt="Raphael Silva" class="hero-img">
+                            </div>
+                            <div class="floating-card">
+                                <div class="card-content">
+                                    <i class="fas fa-code"></i>
+                                    <p>Full Stack Developer</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <h1 class="hero-title">
-                    <span class="title-word" data-word="Raphael">Raphael</span>
-                    <span class="title-word" data-word="Silva">Silva</span>
-                </h1>
-                <p class="hero-subtitle reveal-text">
-                    Desenvolvedor Web Full Stack criando experiências digitais extraordinárias
+            </div>
+
+            <div class="scroll-indicator">
+                <div class="scroll-dot"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal-text">Sobre Mim</h2>
+                    <div class="title-underline"></div>
+                </div>
+
+                <div class="about-grid">
+                    <div class="about-text-wrapper">
+                        <div class="about-text reveal-text">
+                            <p class="about-intro">
+                                Desenvolvedor web apaixonado por criar soluções digitais que funcionam e inspiram.
+                            </p>
+                        </div>
+
+                        <div class="about-text reveal-text" style="animation-delay: 0.2s;">
+                            <p>
+                                Com mais de 2 anos de experiência em desenvolvimento full stack, tenho trabalhado em projetos
+                                desafiadores que exigem criatividade, atenção aos detalhes e conhecimento técnico profundo.
+                            </p>
+                        </div>
+
+                        <div class="about-text reveal-text" style="animation-delay: 0.4s;">
+                            <p>
+                                Meu foco é sempre em criar interfaces intuitivas, performáticas e acessíveis. Quando não estou
+                                codificando, estou explorando novas tecnologias ou contribuindo para projetos open source.
+                            </p>
+                        </div>
+
+                        <div class="about-stats reveal-text" style="animation-delay: 0.6s;">
+                            <div class="stat-item">
+                                <h3 class="stat-number">6+</h3>
+                                <p class="stat-label">Projetos</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">2+</h3>
+                                <p class="stat-label">Anos</p>
+                            </div>
+                            <div class="stat-item">
+                                <h3 class="stat-number">100%</h3>
+                                <p class="stat-label">Dedicação</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-images">
+                        <div class="image-container reveal-scale">
+                            <img src="./img/user/rapha.png" alt="Raphael Silva" class="about-img">
+                            <div class="image-overlay"></div>
+                        </div>
+
+                        <div class="about-card reveal-text" style="animation-delay: 0.3s;">
+                            <div class="card-icon">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h4>Inovação</h4>
+                            <p>Sempre buscando novas formas de resolver problemas</p>
+                        </div>
+
+                        <div class="about-card reveal-text" style="animation-delay: 0.5s;">
+                            <div class="card-icon">
+                                <i class="fas fa-rocket"></i>
+                            </div>
+                            <h4>Performance</h4>
+                            <p>Código otimizado e rápido em todas as plataformas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal-text">Minhas Skills</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="skills-grid">
+                    <!-- Frontend -->
+                    <div class="skill-category reveal-text">
+                        <h3>Frontend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-html5"></i>
+                                <span>HTML5</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-css3-alt"></i>
+                                <span>CSS3</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-js"></i>
+                                <span>JavaScript</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-react"></i>
+                                <span>React</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Backend -->
+                    <div class="skill-category reveal-text" style="animation-delay: 0.1s;">
+                        <h3>Backend</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-node"></i>
+                                <span>Node.js</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-python"></i>
+                                <span>Python</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-php"></i>
+                                <span>PHP</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-square-js"></i>
+                                <span>TypeScript</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tools -->
+                    <div class="skill-category reveal-text" style="animation-delay: 0.2s;">
+                        <h3>Ferramentas</h3>
+                        <div class="skill-items">
+                            <div class="skill-item">
+                                <i class="fab fa-git-alt"></i>
+                                <span>Git</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-database"></i>
+                                <span>SQL</span>
+                            </div>
+                            <div class="skill-item">
+                                <i class="fas fa-code"></i>
+                                <span>REST API</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal-text">Meus Projetos</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card reveal-text">
+                        <div class="project-image">
+                            <img src="./img/projects/cards_prj/1.png" alt="Projeto 1">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Ver Código
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Projeto 1</h3>
+                            <p>Descrição do projeto com tecnologias utilizadas.</p>
+                            <div class="project-tags">
+                                <span class="tag">React</span>
+                                <span class="tag">CSS</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card reveal-text" style="animation-delay: 0.1s;">
+                        <div class="project-image">
+                            <img src="./img/projects/cards_prj/2.png" alt="Projeto 2">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Ver Código
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Projeto 2</h3>
+                            <p>Descrição do projeto com tecnologias utilizadas.</p>
+                            <div class="project-tags">
+                                <span class="tag">Node.js</span>
+                                <span class="tag">MongoDB</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card reveal-text" style="animation-delay: 0.2s;">
+                        <div class="project-image">
+                            <img src="./img/projects/cards_prj/4.png" alt="Projeto 3">
+                            <div class="project-overlay">
+                                <a href="#" class="project-link">
+                                    <i class="fab fa-github"></i> Ver Código
+                                </a>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Projeto 3</h3>
+                            <p>Descrição do projeto com tecnologias utilizadas.</p>
+                            <div class="project-tags">
+                                <span class="tag">TypeScript</span>
+                                <span class="tag">React</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section id="certificates" class="certificates">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal-text">Certificados</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <div class="certificates-grid">
+                    <div class="certificate-card reveal-text">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Desenvolvimento de Sistemas</h3>
+                        <p class="cert-issuer">Etec (Técnico)</p>
+                        <p class="cert-date">Conclusão: 2023</p>
+                    </div>
+                    <div class="certificate-card reveal-text" style="animation-delay: 0.1s;">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Curso Python</h3>
+                        <p class="cert-issuer">Curso em Vídeo</p>
+                        <p class="cert-date">Conclusão: 2023</p>
+                    </div>
+                    <div class="certificate-card reveal-text" style="animation-delay: 0.2s;">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Curso JavaScript</h3>
+                        <p class="cert-issuer">Curso em Vídeo</p>
+                        <p class="cert-date">Conclusão: 2024</p>
+                    </div>
+                    <div class="certificate-card reveal-text" style="animation-delay: 0.3s;">
+                        <div class="cert-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3>Curso GitHub</h3>
+                        <p class="cert-issuer">Curso em Vídeo</p>
+                        <p class="cert-date">Conclusão: 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title reveal-text">Vamos Conversar?</h2>
+                    <div class="title-underline"></div>
+                </div>
+                <p class="contact-subtitle reveal-text">
+                    Estou sempre aberto a novas oportunidades e projetos interessantes.
                 </p>
-                <p class="hero-description reveal-text">
-                    Especializado em React, Node.js, TypeScript e design responsivo.
-                    Transformo ideias em soluções web modernas e escaláveis.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary magnetic-btn">
-                        <span>Explorar Projetos</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                    <a href="#contact" class="btn btn-secondary magnetic-btn">
-                        <span>Entrar em Contato</span>
-                    </a>
-                </div>
-                <div class="hero-socials reveal-text">
-                    <a href="https://linkedin.com" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-image">
-                <div class="image-wrapper">
-                    <div class="image-frame">
-                        <img src="./img/user/rapha.png" alt="Raphael Silva" class="hero-img">
-                    </div>
-                    <div class="floating-card">
-                        <div class="card-content">
-                            <i class="fas fa-code"></i>
-                            <p>Full Stack Developer</p>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item reveal-text">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>seu.email@exemplo.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal-text" style="animation-delay: 0.1s;">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>Telefone</h4>
+                                <p>+55 (11) 9999-9999</p>
+                            </div>
+                        </div>
+                        <div class="contact-item reveal-text" style="animation-delay: 0.2s;">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <h4>Localização</h4>
+                                <p>São Paulo, Brasil</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="scroll-indicator">
-            <div class="scroll-dot"></div>
-            <p>Scroll para explorar</p>
-        </div>
-    </section>
-
-    <!-- About Section - Elegante e Assimétrico -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title reveal-text">Sobre Mim</h2>
-                <div class="title-underline"></div>
-            </div>
-
-            <div class="about-grid">
-                <div class="about-text-wrapper">
-                    <div class="about-text reveal-text">
-                        <p class="about-intro">
-                            Sou um desenvolvedor web apaixonado por criar soluções digitais que não apenas funcionam,
-                            mas que inspiram e engajam os usuários.
-                        </p>
-                    </div>
-
-                    <div class="about-text reveal-text" style="animation-delay: 0.2s;">
-                        <p>
-                            Com mais de 2 anos de experiência em desenvolvimento full stack, tenho trabalhado em projetos
-                            desafiadores que exigem criatividade, atenção aos detalhes e conhecimento técnico profundo.
-                            Meu foco é sempre em criar interfaces intuitivas e performáticas.
-                        </p>
-                    </div>
-
-                    <div class="about-text reveal-text" style="animation-delay: 0.4s;">
-                        <p>
-                            Quando não estou codificando, estou explorando novas tecnologias, contribuindo para projetos
-                            open source ou compartilhando conhecimento com a comunidade de desenvolvedores.
-                        </p>
-                    </div>
-
-                    <div class="about-stats reveal-text" style="animation-delay: 0.6s;">
-                        <div class="stat-item">
-                            <h3 class="stat-number">6+</h3>
-                            <p class="stat-label">Projetos</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number">2+</h3>
-                            <p class="stat-label">Anos</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3 class="stat-number">100%</h3>
-                            <p class="stat-label">Dedicação</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="about-images">
-                    <div class="image-container reveal-scale">
-                        <img src="./img/user/rapha.png" alt="Raphael Silva" class="about-img">
-                        <div class="image-overlay"></div>
-                    </div>
-
-                    <div class="about-card reveal-text" style="animation-delay: 0.3s;">
-                        <div class="card-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h4>Inovação</h4>
-                        <p>Sempre buscando novas formas de resolver problemas</p>
-                    </div>
-
-                    <div class="about-card reveal-text" style="animation-delay: 0.5s;">
-                        <div class="card-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h4>Performance</h4>
-                        <p>Código otimizado e rápido em todas as plataformas</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title reveal-text">Minhas Skills</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="skills-grid">
-                <!-- Frontend -->
-                <div class="skill-category reveal-text">
-                    <h3>Frontend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-html5"></i>
-                            <span>HTML5</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-css3-alt"></i>
-                            <span>CSS3</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-js"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-react"></i>
-                            <span>React</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="skill-category reveal-text" style="animation-delay: 0.1s;">
-                    <h3>Backend</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-node"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-python"></i>
-                            <span>Python</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-php"></i>
-                            <span>PHP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fab fa-square-js"></i>
-                            <span>TypeScript</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tools -->
-                <div class="skill-category reveal-text" style="animation-delay: 0.2s;">
-                    <h3>Ferramentas</h3>
-                    <div class="skill-items">
-                        <div class="skill-item">
-                            <i class="fab fa-git-alt"></i>
-                            <span>Git</span>
-                        </div>
-                        <div class="skill-item">
+                    <div class="contact-socials">
+                        <a href="https://linkedin.com" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="social-icon">
                             <i class="fab fa-github"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code"></i>
-                            <span>REST API</span>
-                        </div>
+                        </a>
+                        <a href="https://instagram.com" target="_blank" class="social-icon">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://whatsapp.com" target="_blank" class="social-icon">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title reveal-text">Meus Projetos</h2>
-                <div class="title-underline"></div>
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2024 Raphael Silva. Todos os direitos reservados.</p>
+                <p>Desenvolvido com <i class="fas fa-heart"></i> usando HTML, CSS e JavaScript</p>
             </div>
-            <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card reveal-text">
-                    <div class="project-image">
-                        <img src="./img/projects/cards_prj/1.png" alt="Projeto 1">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Projeto 1</h3>
-                        <p>Descrição do projeto com tecnologias utilizadas.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">CSS</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card reveal-text" style="animation-delay: 0.1s;">
-                    <div class="project-image">
-                        <img src="./img/projects/cards_prj/2.png" alt="Projeto 2">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Projeto 2</h3>
-                        <p>Descrição do projeto com tecnologias utilizadas.</p>
-                        <div class="project-tags">
-                            <span class="tag">Node.js</span>
-                            <span class="tag">MongoDB</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card reveal-text" style="animation-delay: 0.2s;">
-                    <div class="project-image">
-                        <img src="./img/projects/cards_prj/4.png" alt="Projeto 3">
-                        <div class="project-overlay">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Ver Código
-                            </a>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3>Projeto 3</h3>
-                        <p>Descrição do projeto com tecnologias utilizadas.</p>
-                        <div class="project-tags">
-                            <span class="tag">TypeScript</span>
-                            <span class="tag">React</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Certificates Section -->
-    <section id="certificates" class="certificates">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title reveal-text">Certificados</h2>
-                <div class="title-underline"></div>
-            </div>
-            <div class="certificates-grid">
-                <div class="certificate-card reveal-text">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Desenvolvimento de Sistemas</h3>
-                    <p class="cert-issuer">Etec (Técnico)</p>
-                    <p class="cert-date">Conclusão: 2023</p>
-                </div>
-                <div class="certificate-card reveal-text" style="animation-delay: 0.1s;">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Curso Python</h3>
-                    <p class="cert-issuer">Curso em Vídeo</p>
-                    <p class="cert-date">Conclusão: 2023</p>
-                </div>
-                <div class="certificate-card reveal-text" style="animation-delay: 0.2s;">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Curso JavaScript</h3>
-                    <p class="cert-issuer">Curso em Vídeo</p>
-                    <p class="cert-date">Conclusão: 2024</p>
-                </div>
-                <div class="certificate-card reveal-text" style="animation-delay: 0.3s;">
-                    <div class="cert-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
-                    <h3>Curso GitHub</h3>
-                    <p class="cert-issuer">Curso em Vídeo</p>
-                    <p class="cert-date">Conclusão: 2024</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title reveal-text">Vamos Conversar?</h2>
-                <div class="title-underline"></div>
-            </div>
-            <p class="contact-subtitle reveal-text">
-                Estou sempre aberto a novas oportunidades e projetos interessantes.
-            </p>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item reveal-text">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>Email</h4>
-                            <p>seu.email@exemplo.com</p>
-                        </div>
-                    </div>
-                    <div class="contact-item reveal-text" style="animation-delay: 0.1s;">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>+55 (11) 9999-9999</p>
-                        </div>
-                    </div>
-                    <div class="contact-item reveal-text" style="animation-delay: 0.2s;">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Localização</h4>
-                            <p>São Paulo, Brasil</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-socials">
-                    <a href="https://linkedin.com" target="_blank" class="social-icon">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com" target="_blank" class="social-icon">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://instagram.com" target="_blank" class="social-icon">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://whatsapp.com" target="_blank" class="social-icon">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Raphael Silva. Todos os direitos reservados.</p>
-            <p>Desenvolvido com <i class="fas fa-heart"></i> usando HTML, CSS e JavaScript</p>
-        </div>
-    </footer>
+        </footer>
+    </main>
 
     <!-- Scripts -->
     <script src="./js/js.js"></script>

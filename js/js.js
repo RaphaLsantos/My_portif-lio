@@ -3,9 +3,8 @@
 // ============================================
 document.addEventListener('DOMContentLoaded', () => {
     initCursor();
-    initNavigation();
+    initSidebar();
     initScrollAnimations();
-    initMobileMenu();
     initSmoothScroll();
     initMagneticButtons();
     initParallax();
@@ -47,12 +46,29 @@ function initCursor() {
 }
 
 // ============================================
-// NAVEGAÇÃO COM ACTIVE LINK
+// SIDEBAR NAVIGATION
 // ============================================
-function initNavigation() {
-    const navLinks = document.querySelectorAll('.nav-link');
+function initSidebar() {
+    const sidebar = document.querySelector('.sidebar');
+    const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('section');
 
+    // Toggle sidebar no mobile
+    if (sidebarToggle) {
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+    }
+
+    // Fechar sidebar ao clicar em um link
+    navItems.forEach(item => {
+        item.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+        });
+    });
+
+    // Atualizar nav item ativo ao scrollar
     window.addEventListener('scroll', () => {
         let current = '';
         sections.forEach(section => {
@@ -63,39 +79,22 @@ function initNavigation() {
             }
         });
 
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').slice(1) === current) {
-                link.classList.add('active');
+        navItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('data-section') === current) {
+                item.classList.add('active');
             }
         });
     });
 
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const hamburger = document.querySelector('.hamburger');
-            const navMenu = document.querySelector('.nav-menu');
-            if (navMenu.classList.contains('active')) {
-                navMenu.classList.remove('active');
-                hamburger.classList.remove('active');
+    // Fechar sidebar ao clicar fora dela no mobile
+    document.addEventListener('click', (e) => {
+        if (window.innerWidth <= 768) {
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('active');
             }
-        });
+        }
     });
-}
-
-// ============================================
-// MENU MOBILE
-// ============================================
-function initMobileMenu() {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
-
-    if (hamburger) {
-        hamburger.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            hamburger.classList.toggle('active');
-        });
-    }
 }
 
 // ============================================
@@ -128,7 +127,6 @@ function initScrollReveal() {
     const observer = new IntersectionObserver((entries) => {
         entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                // Adiciona delay progressivo para elementos em sequência
                 const delay = index * 0.1;
                 entry.target.style.animationDelay = delay + 's';
                 entry.target.style.opacity = '1';
@@ -140,7 +138,6 @@ function initScrollReveal() {
         });
     }, observerOptions);
 
-    // Observar todos os elementos com classe reveal
     document.querySelectorAll('.reveal-text, .reveal-scale, .project-card, .skill-category, .certificate-card, .contact-item').forEach(el => {
         observer.observe(el);
     });
@@ -171,7 +168,7 @@ function initScrollAnimations() {
 }
 
 // ============================================
-// MAGNETIC BUTTONS - Botões que "atraem" o cursor
+// MAGNETIC BUTTONS
 // ============================================
 function initMagneticButtons() {
     const magneticButtons = document.querySelectorAll('.magnetic-btn');
@@ -182,7 +179,6 @@ function initMagneticButtons() {
             const x = e.clientX - rect.left - rect.width / 2;
             const y = e.clientY - rect.top - rect.height / 2;
 
-            // Limita o movimento
             const distance = Math.sqrt(x * x + y * y);
             const maxDistance = 50;
 
@@ -201,7 +197,7 @@ function initMagneticButtons() {
 }
 
 // ============================================
-// PARALLAX DE IMAGENS
+// PARALLAX
 // ============================================
 function initParallax() {
     const parallaxElements = document.querySelectorAll('.hero-img, .about-img, .image-frame');
@@ -256,7 +252,7 @@ function animateCounters() {
 window.addEventListener('load', animateCounters);
 
 // ============================================
-// EFEITO DE DIGITAÇÃO NO HERO
+// EFEITO DE DIGITAÇÃO
 // ============================================
 function typeEffect() {
     const titleWords = document.querySelectorAll('.title-word');
@@ -281,7 +277,7 @@ function typeEffect() {
 window.addEventListener('load', typeEffect);
 
 // ============================================
-// RIPPLE EFFECT NOS BOTÕES
+// RIPPLE EFFECT
 // ============================================
 function initRippleEffect() {
     const buttons = document.querySelectorAll('.btn, .social-link, .social-icon');
@@ -309,7 +305,7 @@ function initRippleEffect() {
 window.addEventListener('load', initRippleEffect);
 
 // ============================================
-// SCROLL SUAVE PARA SEÇÕES
+// SCROLL INDICATOR
 // ============================================
 const scrollIndicator = document.querySelector('.scroll-indicator');
 if (scrollIndicator) {
@@ -322,7 +318,7 @@ if (scrollIndicator) {
 }
 
 // ============================================
-// EFEITO DE HOVER NOS CARDS
+// CARD HOVER EFFECT
 // ============================================
 function initCardHoverEffect() {
     const cards = document.querySelectorAll('.project-card, .skill-category, .certificate-card, .about-card');
@@ -351,7 +347,7 @@ function initCardHoverEffect() {
 window.addEventListener('load', initCardHoverEffect);
 
 // ============================================
-// DEBOUNCE PARA EVENTOS
+// DEBOUNCE
 // ============================================
 function debounce(func, wait) {
     let timeout;
@@ -370,25 +366,24 @@ function debounce(func, wait) {
 // ============================================
 window.addEventListener('resize', debounce(() => {
     if (window.innerWidth > 768) {
-        document.querySelector('.nav-menu').classList.remove('active');
-        document.querySelector('.hamburger').classList.remove('active');
+        document.querySelector('.sidebar').classList.remove('active');
     }
 }, 250));
 
 // ============================================
-// SCROLL SUAVE GLOBAL
+// SCROLL SUAVE NAVBAR
 // ============================================
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
+    const sidebar = document.querySelector('.sidebar');
     if (window.pageYOffset > 50) {
-        navbar.style.background = 'linear-gradient(180deg, rgba(10, 14, 39, 0.98) 0%, rgba(10, 14, 39, 0.9) 100%)';
+        sidebar.style.background = 'linear-gradient(180deg, rgba(17, 22, 51, 0.98) 0%, rgba(10, 14, 39, 0.95) 100%)';
     } else {
-        navbar.style.background = 'linear-gradient(180deg, rgba(10, 14, 39, 0.95) 0%, rgba(10, 14, 39, 0.8) 100%)';
+        sidebar.style.background = 'linear-gradient(180deg, rgba(17, 22, 51, 0.95) 0%, rgba(10, 14, 39, 0.95) 100%)';
     }
 });
 
 // ============================================
-// DETECÇÃO DE PREFERÊNCIA DE TEMA
+// DETECÇÃO DE TEMA
 // ============================================
 function initTheme() {
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
@@ -400,7 +395,7 @@ function initTheme() {
 initTheme();
 
 // ============================================
-// LAZY LOADING DE IMAGENS
+// LAZY LOADING
 // ============================================
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -427,12 +422,12 @@ console.log(
     'color: #6366f1; font-size: 16px; font-weight: bold;'
 );
 console.log(
-    '%cDesenvolvido com HTML, CSS e JavaScript puro - Repleto de animações e interatividade!',
+    '%cDesenvolvido com HTML, CSS e JavaScript puro - Com Sidebar Lateral!',
     'color: #818cf8; font-size: 12px;'
 );
 
 // ============================================
-// SCROLL REVEAL COM STAGGER EFFECT
+// STAGGER REVEAL
 // ============================================
 function initStaggerReveal() {
     const revealElements = document.querySelectorAll('.reveal-text, .reveal-scale');
@@ -459,13 +454,6 @@ function initStaggerReveal() {
 }
 
 window.addEventListener('load', initStaggerReveal);
-
-// ============================================
-// SMOOTH SCROLL BEHAVIOR
-// ============================================
-if (!CSS.supports('scroll-behavior', 'smooth')) {
-    document.documentElement.style.scrollBehavior = 'auto';
-}
 
 // ============================================
 // PRELOAD IMAGES
