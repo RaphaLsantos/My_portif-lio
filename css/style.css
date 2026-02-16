@@ -255,6 +255,8 @@ body.cursor-enabled .cursor-blur {
     z-index: 1002;
     transition: all var(--transition-base);
     box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+    align-items: center;
+    justify-content: center;
 }
 
 .sidebar-toggle:hover {
@@ -1236,7 +1238,7 @@ body.cursor-enabled .cursor-blur {
     }
 
     .sidebar-toggle {
-        display: flex;
+        display: flex !important;
         align-items: center;
         justify-content: center;
     }
