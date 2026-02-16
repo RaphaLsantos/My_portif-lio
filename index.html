@@ -37,23 +37,41 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Hero Section - Ultra Elegante -->
     <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="gradient-mesh"></div>
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
         <div class="hero-content">
             <div class="hero-text">
+                <div class="hero-label reveal-text">
+                    <span>Bem-vindo ao meu portfólio</span>
+                </div>
                 <h1 class="hero-title">
-                    <span class="gradient-text">Raphael Silva</span>
+                    <span class="title-word" data-word="Raphael">Raphael</span>
+                    <span class="title-word" data-word="Silva">Silva</span>
                 </h1>
-                <p class="hero-subtitle">Desenvolvedor Web Full Stack</p>
-                <p class="hero-description">
-                    Criando experiências digitais incríveis com tecnologias modernas.
-                    Especializado em React, Node.js e design responsivo.
+                <p class="hero-subtitle reveal-text">
+                    Desenvolvedor Web Full Stack criando experiências digitais extraordinárias
+                </p>
+                <p class="hero-description reveal-text">
+                    Especializado em React, Node.js, TypeScript e design responsivo.
+                    Transformo ideias em soluções web modernas e escaláveis.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#projects" class="btn btn-primary">Ver Projetos</a>
-                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                    <a href="#projects" class="btn btn-primary magnetic-btn">
+                        <span>Explorar Projetos</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-secondary magnetic-btn">
+                        <span>Entrar em Contato</span>
+                    </a>
                 </div>
-                <div class="hero-socials">
+                <div class="hero-socials reveal-text">
                     <a href="https://linkedin.com" target="_blank" class="social-link">
                         <i class="fab fa-linkedin"></i>
                     </a>
@@ -65,9 +83,18 @@
                     </a>
                 </div>
             </div>
+
             <div class="hero-image">
                 <div class="image-wrapper">
-                    <img src="./img/user/rapha.png" alt="Raphael Silva">
+                    <div class="image-frame">
+                        <img src="./img/user/rapha.png" alt="Raphael Silva" class="hero-img">
+                    </div>
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <i class="fas fa-code"></i>
+                            <p>Full Stack Developer</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -75,41 +102,79 @@
         <!-- Scroll Indicator -->
         <div class="scroll-indicator">
             <div class="scroll-dot"></div>
+            <p>Scroll para explorar</p>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- About Section - Elegante e Assimétrico -->
     <section id="about" class="about">
         <div class="container">
-            <h2 class="section-title">Sobre Mim</h2>
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Sobre Mim</h2>
+                <div class="title-underline"></div>
+            </div>
+
             <div class="about-grid">
-                <div class="about-text">
-                    <p>
-                        Sou um desenvolvedor web apaixonado por criar soluções digitais inovadoras.
-                        Com experiência em desenvolvimento front-end e back-end, trabalho para transformar
-                        ideias em aplicações web de alta qualidade.
-                    </p>
-                    <p>
-                        Meu foco é em criar interfaces intuitivas e performáticas, sempre mantendo
-                        as melhores práticas de código limpo e arquitetura escalável.
-                    </p>
-                    <div class="about-stats">
-                        <div class="stat">
-                            <h3>6+</h3>
-                            <p>Projetos Concluídos</p>
+                <div class="about-text-wrapper">
+                    <div class="about-text reveal-text">
+                        <p class="about-intro">
+                            Sou um desenvolvedor web apaixonado por criar soluções digitais que não apenas funcionam,
+                            mas que inspiram e engajam os usuários.
+                        </p>
+                    </div>
+
+                    <div class="about-text reveal-text" style="animation-delay: 0.2s;">
+                        <p>
+                            Com mais de 2 anos de experiência em desenvolvimento full stack, tenho trabalhado em projetos
+                            desafiadores que exigem criatividade, atenção aos detalhes e conhecimento técnico profundo.
+                            Meu foco é sempre em criar interfaces intuitivas e performáticas.
+                        </p>
+                    </div>
+
+                    <div class="about-text reveal-text" style="animation-delay: 0.4s;">
+                        <p>
+                            Quando não estou codificando, estou explorando novas tecnologias, contribuindo para projetos
+                            open source ou compartilhando conhecimento com a comunidade de desenvolvedores.
+                        </p>
+                    </div>
+
+                    <div class="about-stats reveal-text" style="animation-delay: 0.6s;">
+                        <div class="stat-item">
+                            <h3 class="stat-number">6+</h3>
+                            <p class="stat-label">Projetos</p>
                         </div>
-                        <div class="stat">
-                            <h3>2+</h3>
-                            <p>Anos de Experiência</p>
+                        <div class="stat-item">
+                            <h3 class="stat-number">2+</h3>
+                            <p class="stat-label">Anos</p>
                         </div>
-                        <div class="stat">
-                            <h3>100%</h3>
-                            <p>Dedicação</p>
+                        <div class="stat-item">
+                            <h3 class="stat-number">100%</h3>
+                            <p class="stat-label">Dedicação</p>
                         </div>
                     </div>
                 </div>
-                <div class="about-image">
-                    <img src="./img/user/rapha.png" alt="Raphael Silva">
+
+                <div class="about-images">
+                    <div class="image-container reveal-scale">
+                        <img src="./img/user/rapha.png" alt="Raphael Silva" class="about-img">
+                        <div class="image-overlay"></div>
+                    </div>
+
+                    <div class="about-card reveal-text" style="animation-delay: 0.3s;">
+                        <div class="card-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h4>Inovação</h4>
+                        <p>Sempre buscando novas formas de resolver problemas</p>
+                    </div>
+
+                    <div class="about-card reveal-text" style="animation-delay: 0.5s;">
+                        <div class="card-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h4>Performance</h4>
+                        <p>Código otimizado e rápido em todas as plataformas</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -118,10 +183,13 @@
     <!-- Skills Section -->
     <section id="skills" class="skills">
         <div class="container">
-            <h2 class="section-title">Minhas Skills</h2>
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Minhas Skills</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="skills-grid">
                 <!-- Frontend -->
-                <div class="skill-category">
+                <div class="skill-category reveal-text">
                     <h3>Frontend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -144,7 +212,7 @@
                 </div>
 
                 <!-- Backend -->
-                <div class="skill-category">
+                <div class="skill-category reveal-text" style="animation-delay: 0.1s;">
                     <h3>Backend</h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -167,7 +235,7 @@
                 </div>
 
                 <!-- Tools -->
-                <div class="skill-category">
+                <div class="skill-category reveal-text" style="animation-delay: 0.2s;">
                     <h3>Ferramentas</h3>
                     <div class="skill-items">
                         <div class="skill-item">
@@ -195,10 +263,13 @@
     <!-- Projects Section -->
     <section id="projects" class="projects">
         <div class="container">
-            <h2 class="section-title">Meus Projetos</h2>
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Meus Projetos</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="projects-grid">
                 <!-- Project 1 -->
-                <div class="project-card">
+                <div class="project-card reveal-text">
                     <div class="project-image">
                         <img src="./img/projects/cards_prj/1.png" alt="Projeto 1">
                         <div class="project-overlay">
@@ -218,7 +289,7 @@
                 </div>
 
                 <!-- Project 2 -->
-                <div class="project-card">
+                <div class="project-card reveal-text" style="animation-delay: 0.1s;">
                     <div class="project-image">
                         <img src="./img/projects/cards_prj/2.png" alt="Projeto 2">
                         <div class="project-overlay">
@@ -238,7 +309,7 @@
                 </div>
 
                 <!-- Project 3 -->
-                <div class="project-card">
+                <div class="project-card reveal-text" style="animation-delay: 0.2s;">
                     <div class="project-image">
                         <img src="./img/projects/cards_prj/4.png" alt="Projeto 3">
                         <div class="project-overlay">
@@ -263,9 +334,12 @@
     <!-- Certificates Section -->
     <section id="certificates" class="certificates">
         <div class="container">
-            <h2 class="section-title">Certificados</h2>
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Certificados</h2>
+                <div class="title-underline"></div>
+            </div>
             <div class="certificates-grid">
-                <div class="certificate-card">
+                <div class="certificate-card reveal-text">
                     <div class="cert-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -273,7 +347,7 @@
                     <p class="cert-issuer">Etec (Técnico)</p>
                     <p class="cert-date">Conclusão: 2023</p>
                 </div>
-                <div class="certificate-card">
+                <div class="certificate-card reveal-text" style="animation-delay: 0.1s;">
                     <div class="cert-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -281,7 +355,7 @@
                     <p class="cert-issuer">Curso em Vídeo</p>
                     <p class="cert-date">Conclusão: 2023</p>
                 </div>
-                <div class="certificate-card">
+                <div class="certificate-card reveal-text" style="animation-delay: 0.2s;">
                     <div class="cert-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -289,7 +363,7 @@
                     <p class="cert-issuer">Curso em Vídeo</p>
                     <p class="cert-date">Conclusão: 2024</p>
                 </div>
-                <div class="certificate-card">
+                <div class="certificate-card reveal-text" style="animation-delay: 0.3s;">
                     <div class="cert-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
@@ -304,27 +378,30 @@
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">Vamos Conversar?</h2>
-            <p class="contact-subtitle">
+            <div class="section-header">
+                <h2 class="section-title reveal-text">Vamos Conversar?</h2>
+                <div class="title-underline"></div>
+            </div>
+            <p class="contact-subtitle reveal-text">
                 Estou sempre aberto a novas oportunidades e projetos interessantes.
             </p>
             <div class="contact-content">
                 <div class="contact-info">
-                    <div class="contact-item">
+                    <div class="contact-item reveal-text">
                         <i class="fas fa-envelope"></i>
                         <div>
                             <h4>Email</h4>
                             <p>seu.email@exemplo.com</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item reveal-text" style="animation-delay: 0.1s;">
                         <i class="fas fa-phone"></i>
                         <div>
                             <h4>Telefone</h4>
                             <p>+55 (11) 9999-9999</p>
                         </div>
                     </div>
-                    <div class="contact-item">
+                    <div class="contact-item reveal-text" style="animation-delay: 0.2s;">
                         <i class="fas fa-map-marker-alt"></i>
                         <div>
                             <h4>Localização</h4>
