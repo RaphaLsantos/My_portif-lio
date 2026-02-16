@@ -51,13 +51,31 @@ function initCursor() {
 function initSidebar() {
     const sidebar = document.querySelector('.sidebar');
     const sidebarToggle = document.querySelector('.sidebar-toggle');
+    const sidebarOverlay = document.querySelector('.sidebar-overlay');
     const navItems = document.querySelectorAll('.nav-item');
     const sections = document.querySelectorAll('section');
 
+    // Funcao para abrir/fechar sidebar
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('active');
+        sidebarToggle.classList.toggle('active');
+        sidebarOverlay.classList.toggle('active');
+    };
+
     // Toggle sidebar no mobile
     if (sidebarToggle) {
-        sidebarToggle.addEventListener('click', () => {
-            sidebar.classList.toggle('active');
+        sidebarToggle.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleSidebar();
+        });
+    }
+
+    // Fechar sidebar ao clicar no overlay
+    if (sidebarOverlay) {
+        sidebarOverlay.addEventListener('click', () => {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
         });
     }
 
@@ -65,6 +83,8 @@ function initSidebar() {
     navItems.forEach(item => {
         item.addEventListener('click', () => {
             sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
         });
     });
 
@@ -92,7 +112,18 @@ function initSidebar() {
         if (window.innerWidth <= 768) {
             if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
                 sidebar.classList.remove('active');
+                sidebarToggle.classList.remove('active');
+                sidebarOverlay.classList.remove('active');
             }
+        }
+    });
+
+    // Fechar sidebar ao redimensionar a janela
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            sidebar.classList.remove('active');
+            sidebarToggle.classList.remove('active');
+            sidebarOverlay.classList.remove('active');
         }
     });
 }
