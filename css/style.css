@@ -329,12 +329,12 @@ body.cursor-enabled .cursor-blur {
     position: absolute;
     width: 150%;
     height: 150%;
-    background: linear-gradient(45deg, 
-        rgba(99, 102, 241, 0.1) 0%, 
-        transparent 25%, 
-        rgba(99, 102, 241, 0.05) 50%, 
-        transparent 75%, 
-        rgba(99, 102, 241, 0.1) 100%);
+    background: linear-gradient(45deg,
+            rgba(99, 102, 241, 0.1) 0%,
+            transparent 25%,
+            rgba(99, 102, 241, 0.05) 50%,
+            transparent 75%,
+            rgba(99, 102, 241, 0.1) 100%);
     animation: meshShift 15s ease-in-out infinite;
 }
 
@@ -373,13 +373,27 @@ body.cursor-enabled .cursor-blur {
 }
 
 @keyframes meshShift {
-    0%, 100% { transform: translate(0, 0) rotate(0deg); }
-    50% { transform: translate(50px, 50px) rotate(180deg); }
+
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate(50px, 50px) rotate(180deg);
+    }
 }
 
 @keyframes orbFloat {
-    0%, 100% { transform: translate(0, 0); }
-    50% { transform: translate(100px, 100px); }
+
+    0%,
+    100% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(100px, 100px);
+    }
 }
 
 .hero-content {
@@ -438,6 +452,7 @@ body.cursor-enabled .cursor-blur {
         opacity: 0;
         transform: translateY(30px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -549,8 +564,15 @@ body.cursor-enabled .cursor-blur {
 }
 
 @keyframes frameFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
+
+    0%,
+    100% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
 }
 
 .hero-img {
@@ -573,8 +595,15 @@ body.cursor-enabled .cursor-blur {
 }
 
 @keyframes cardFloat {
-    0%, 100% { transform: translateY(0px) rotate(0deg); }
-    50% { transform: translateY(-15px) rotate(2deg); }
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-15px) rotate(2deg);
+    }
 }
 
 .card-content {
@@ -614,8 +643,15 @@ body.cursor-enabled .cursor-blur {
 }
 
 @keyframes bounce {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-15px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
 }
 
 /* ========================================
@@ -652,6 +688,7 @@ body.cursor-enabled .cursor-blur {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -663,6 +700,7 @@ body.cursor-enabled .cursor-blur {
         opacity: 0;
         transform: translateX(50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -698,8 +736,13 @@ body.cursor-enabled .cursor-blur {
 }
 
 @keyframes expandWidth {
-    from { width: 0; }
-    to { width: 60px; }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 60px;
+    }
 }
 
 /* ========================================
@@ -812,6 +855,13 @@ body.cursor-enabled .cursor-blur {
     pointer-events: none;
 }
 
+.cards_section {
+    display:contents;
+    flex-direction: row;
+    gap: 2rem;
+    height: auto;
+}
+
 .about-card {
     background: rgba(99, 102, 241, 0.1);
     backdrop-filter: blur(10px);
@@ -821,6 +871,7 @@ body.cursor-enabled .cursor-blur {
     text-align: center;
     transition: all var(--transition-base);
     opacity: 0;
+    max-width: 100%;
 }
 
 .about-card:hover {

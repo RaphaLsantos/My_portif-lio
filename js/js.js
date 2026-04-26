@@ -231,7 +231,7 @@ function initMagneticButtons() {
 // PARALLAX
 // ============================================
 function initParallax() {
-    const parallaxElements = document.querySelectorAll('.hero-img, .about-img, .image-frame');
+    const parallaxElements = document.querySelectorAll('.hero-img, .image-frame');
 
     window.addEventListener('scroll', () => {
         parallaxElements.forEach(element => {
