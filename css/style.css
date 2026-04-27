@@ -856,13 +856,25 @@ body.cursor-enabled .cursor-blur {
 }
 
 .cards_section {
-    display:contents;
+    display: flex;
     flex-direction: row;
-    gap: 2rem;
-    height: auto;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: center;
+    align-items: stretch;
+    width: min(900px, 100%);
+    margin: var(--spacing-2xl) auto 0;
+    grid-column: 1 / -1;
 }
 
 .about-card {
+    flex: 0 0 360px;
+    min-width: 400px;
+    max-width: 450px;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     background: rgba(99, 102, 241, 0.1);
     backdrop-filter: blur(10px);
     padding: var(--spacing-lg);
@@ -871,7 +883,6 @@ body.cursor-enabled .cursor-blur {
     text-align: center;
     transition: all var(--transition-base);
     opacity: 0;
-    max-width: 100%;
 }
 
 .about-card:hover {
@@ -931,6 +942,7 @@ body.cursor-enabled .cursor-blur {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-lg);
     color: var(--accent);
+    text-align: center;
 }
 
 .skill-items {
@@ -964,6 +976,60 @@ body.cursor-enabled .cursor-blur {
     font-size: 0.875rem;
     color: var(--text-secondary);
     text-align: center;
+}
+
+.skill-item {
+    transition: all var(--transition-base);
+}
+
+.skill-item.html:hover i {
+    color: #e34f26;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.css:hover i {
+    color: #2965f1;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.js:hover i {
+    color: #f7df1e;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.react:hover i {
+    color: #61dafb;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.node:hover i {
+    color: #68a063;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.php:hover i {
+    color: #777bb4;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.typescript:hover i {
+    color: #3178c6;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.git:hover i {
+    color: #f05032;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.github:hover i {
+    color: #6e5494;
+    transform: scale(1.1) rotate(5deg);
+}
+
+.skill-item.api:hover i {
+    color: #10b981;
+    transform: scale(1.1) rotate(5deg);
 }
 
 /* ========================================
@@ -1029,6 +1095,8 @@ body.cursor-enabled .cursor-blur {
     background: rgba(10, 14, 39, 0.9);
     backdrop-filter: blur(5px);
     display: flex;
+    flex-direction: column;
+    gap: 2rem;
     align-items: center;
     justify-content: center;
     opacity: 0;
@@ -1050,6 +1118,10 @@ body.cursor-enabled .cursor-blur {
     border-radius: 8px;
     font-weight: 600;
     transition: all var(--transition-base);
+    min-width: 170px;
+    max-width: 200px;
+    min-height: auto;
+    justify-content: center;
 }
 
 .project-link:hover {
